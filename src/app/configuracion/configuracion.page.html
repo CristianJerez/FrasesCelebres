@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-item>
+      <ion-toggle [checked]="fraseInicio" (ionChange)="switch()">Permitir eliminar citas en el inicio</ion-toggle><br /><br />
+    </ion-item>
+  </ion-row>
+</ion-content>

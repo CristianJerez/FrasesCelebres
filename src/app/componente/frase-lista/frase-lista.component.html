@@ -1,0 +1,21 @@
+<ion-list>
+  <ion-item *ngFor="let f of listaCitas">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+          <ion-row>
+            <h5>{{f.cita}}</h5>
+          </ion-row>
+          <ion-row class=" ion-justify-content-end">
+            <h6>{{f.autor}}</h6>
+          </ion-row>
+        </ion-col>
+        <ion-col class="centrar">
+          <ion-button (click)="borrarFrase(f.ID)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>

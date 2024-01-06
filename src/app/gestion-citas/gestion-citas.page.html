@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Gestor de Citas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-frase-formulario (notificaEvento)="recibeNotificacion($event)"></app-frase-formulario>
+  <app-frase-lista (notificaEliminacion)="recibeEliminacion($event)"></app-frase-lista>
+</ion-content>

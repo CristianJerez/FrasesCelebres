@@ -1,0 +1,21 @@
+<ion-item>
+  <ion-input [(ngModel)]="incorporaFrase" required="required" minlength="5" #frase="ngModel" label="Escriba una frase celebre:" labelPlacement="stacked"
+    [clearInput]="true" placeholder="Ej: Podran quitarnos nuestras vidas, pero jamas, nuestra libertad!">
+  </ion-input>
+</ion-item>
+<ion-item>
+  <ion-input [(ngModel)]="incorporaAutor" required="required" minlength="2" #autor="ngModel" label="Indique el autor:" labelPlacement="stacked" [clearInput]="true"
+    placeholder="Ej: William Wallace">
+  </ion-input>
+</ion-item>
+<ion-item>
+  <ion-text [hidden]="frase.valid || frase.pristine" color="warning">
+    Escribe una frase con más de 5 caracteres!
+  </ion-text>
+</ion-item>
+<ion-item>
+  <ion-text [hidden]="autor.valid || autor.pristine" color="warning">
+    El nombre del autor debe tener más de 2 caracteres!
+  </ion-text>
+</ion-item>
+<ion-button [disabled]="!frase.valid || !autor.valid" (click)="guardarFrase()" expand="block">Guardar frase</ion-button>

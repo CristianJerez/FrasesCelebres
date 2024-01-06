@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end"><ion-button (click)="irConfiguracion()">
+      <ion-icon name="settings"> </ion-icon>
+    </ion-button></ion-buttons>
+    <ion-title>
+      Citas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<app-frase-celebre [muestraFrase]="estadoSwitch"></app-frase-celebre>
+<ion-button expand="block" (click)="IrGestionCitas()"><ion-icon name="add-outline"></ion-icon> </ion-button> 
+
+</ion-content>

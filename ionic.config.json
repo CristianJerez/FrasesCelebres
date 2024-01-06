@@ -1,0 +1,7 @@
+{
+  "name": "frasescelebres",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
